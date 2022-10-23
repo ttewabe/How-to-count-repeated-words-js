@@ -75,3 +75,23 @@ function wordCount(sentence){
 const example = "The quick brown fox jumps over the lazy dog. A dog should not be so lazy, whether the fox is quick or not. The fox knows what it's doing."
 
 wordCount(example);
+
+
+
+console.log("                                                ");
+console.log("~~~~~~~~~~~~~~~~~~~~ TASK 1~~~~~~~~~~~~~~~~~~~~~~~~");
+let word1 = "I am not gonna live forever, but I wanna live while I am alive";
+
+function countRepeatedWords(sentence) {
+  let word1 = sentence.toUpperCase().split(" ");
+  let wordMap = {};
+
+  for (let i = 0; i < word1.length; i++) {
+    let currentWordCount = wordMap[word1[i]];
+    let count = currentWordCount ? currentWordCount : 0;
+    wordMap[word1[i]] = count + 1;
+  }
+  return wordMap;
+}
+
+console.log(countRepeatedWords(word1));
